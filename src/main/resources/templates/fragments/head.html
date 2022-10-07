@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="headFragment">
 <head>
     <meta charset="UTF-8">
     <title>header</title>
@@ -110,6 +111,7 @@
     </style>
 </head>
 <body>
+<div th:fragment="headFragment">
 
 <div class="header">
     <h1>My Website</h1>
@@ -136,5 +138,7 @@
         <div class="fakeimg" style="height:60px;">Image</div>
     </div>
 </div>
+</div>
 </body>
+</th:block>
 </html>
