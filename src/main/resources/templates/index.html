@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+
+    </style>
+
 </head>
 <body>
-<th:block layout:fragment="content">
-<div class="main">
-    <h2>TITLE selectOne</h2>
-
+<div>
+    <th:block th:replace="fragments/head :: headFragment('head')"></th:block>
+    <th:block layout:fragment="content">
+        <div class="main">
+            <h2>TITLE selectOne</h2>
+        </div>
+    </th:block>
+    <th:block th:replace="fragments/footer :: footerFragment"></th:block>
 
 </div>
-</th:block>
 </body>
 </html>
