@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-
+        .main {
+            -ms-flex: 70%; /* IE10 */
+            flex: 70%;
+            background-color: #d5cbbd;
+            padding: 20px;
+        }
     </style>
 
 </head>
@@ -14,7 +19,6 @@
     <th:block th:replace="fragments/head :: headFragment('head')"></th:block>
     <th:block layout:fragment="content">
         <div class="main">
-            <h2>본문내용</h2>
         </div>
     </th:block>
     <th:block th:replace="fragments/footer :: footerFragment"></th:block>
