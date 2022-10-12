@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Setter
 @ToString
 @AllArgsConstructor
-public class MainEntity {
+public class Main {
 
     @Id
     private Integer num;
@@ -22,7 +22,7 @@ public class MainEntity {
     @Column
     private String password;
 
-    public MainEntity() {
+    public Main() {
 
     }
 }

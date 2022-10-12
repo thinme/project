@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="fragments/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    .main {
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: #d5cbbd;
+    padding: 500px;
+    }
+
+    </style>
+</head>
+<body>
+<th:block th:replace="fragments/head :: headFragment('head')"></th:block>
+<th:block layout:fragment="content">
+    <form class="main" th:action="@{/member/insert}" method="post">
+        <h5>입력정보란</h5>
+        <input type="text" th:field="*{id}" >
+
+    </form>
+</th:block>
+<th:block th:replace="fragments/footer :: footerFragment"></th:block>
+
+</body>
+</html>
