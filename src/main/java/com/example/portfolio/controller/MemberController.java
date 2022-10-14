@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class MemberController {
 
@@ -17,8 +19,7 @@ public class MemberController {
     private MemberRepository memberRepository;
 
     //회원등록및 수정
-
-    @GetMapping("/member/insert")
+    // @GetMapping("/member/insert")
     public String Insert(@RequestParam(value = "num", required = false) Integer num, Model model){
         //기존회원수정
         if(num != null){

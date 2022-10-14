@@ -13,6 +13,7 @@ public interface MemberRepository extends JpaRepository<Member, Integer> {
 
     Page<Member> findById(String id, Pageable pageable );
 
+
     @Transactional
     @Modifying
     @Query( "UPDATE Member m SET m.name = :name, m.age = :age WHERE m.num = :num" )

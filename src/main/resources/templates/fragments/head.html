@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:name="http://www.w3.org/1999/xhtml">
 <th:block th:fragment="headFragment(param1)">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>header</title>
     <style>
@@ -76,12 +77,12 @@
 <body>
 <div class="header">
     <h1>Shout Out Your Music</h1>
-    <div class="login">
+    <form class="login" name="login" method="POST" action=""login>
     <input type="text" name="id" value="id"><br>
     <input type="text" name="password" value="password"><br>
     <input type="submit" value="로그인하기">
     <button th:onclick="|location.href='@{/memberInsert}'|">회원가입</button>
-    </div>
+    </form>
 </div>
 
 <div class="navbar">

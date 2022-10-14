@@ -35,7 +35,7 @@
     </h2>
 
     <!-- form action="/jpa/memberWrite" method="POST" id="memberWriteForm" -->
-    <form th:action="@{/jpa/memberWrite}" th:object="${memberDTO}" method="POST" id="memberWriteForm">
+    <form th:action="@{/member/insert}" th:object="${memberDto}" method="POST" id="memberWriteForm">
         <input type="hidden" name="num" th:field="*{num}">
 
         <label for="name">Name</label>
@@ -46,10 +46,13 @@
         <input type="text" id="id" name="id" th:field="*{id}">
         <br>
 
-        <label for="phone">Phone</label>
-        <input type="text" id="phone" name="phone" th:field="*{phone}">
+        <label for="password">password</label>
+        <input type="text" id="password" name="password" th:field="*{password}">
         <br>
 
+        <label for="email">email</label>
+        <input type="text" id="email" name="email" th:field="*{email}">
+        <br>
         <label for="age">Age</label>
         <input type="text" id="age" name="age" th:field="*{age}">
         <br>
@@ -61,7 +64,7 @@
         <button type="submit" form="memberWriteForm" th:case="Registration">회원등록</button>
         <button type="submit" form="memberWriteForm" th:case="Modification">회원수정</button>
     </div>
-
+</th:block>
     <th:block th:replace="fragments/footer :: footerFragment"></th:block>
 
 </body>
